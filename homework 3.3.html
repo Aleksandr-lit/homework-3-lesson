@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOMEWORK 3.3</title>
+	<style>
+		#myUl {
+			font-size: 20px;
+    		font-family: arial;
+    		list-style: decimal;
+		}
+	</style>
+</head>
+<body>
+	<ul id="myUl"></ul>
+	<script type="text/javascript">
+		var getPhraseUser = prompt();
+		var arrayOfStrings;
+		var space = ' ';
+
+		function splitString(stringToSplit, space) {
+			arrayOfStrings = stringToSplit.split(space);
+			for (var i = 0; i < arrayOfStrings.length; i++) {
+				arrayOfStrings[0] = arrayOfStrings[0].toUpperCase();
+				arrayOfStrings[arrayOfStrings.length - 1] = arrayOfStrings[arrayOfStrings.length - 1].toLowerCase();
+				arrayOfStrings[arrayOfStrings.length - 2] = arrayOfStrings[arrayOfStrings.length - 2].toLowerCase();
+				var newItem = document.createElement("li");
+				newItem.innerHTML = arrayOfStrings[i];
+				document.getElementById('myUl').appendChild(newItem); 	
+			}
+		}
+
+		splitString(getPhraseUser, space);
+
+		var target = 'a'; //ищем "a" English
+		var count = 0; 
+		var pos = 0;
+		while (true) {	
+			var foundPos = getPhraseUser.indexOf(target, pos);
+			if (foundPos == -1) {
+				break;}
+				++count;
+				pos = foundPos + 1; 
+			}
+
+		alert("Кількість букв \"a\": " + count);
+	</script>
+</body>
+</html>

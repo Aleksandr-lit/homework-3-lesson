@@ -1,0 +1,16 @@
+body {
+	background-color: #7bc8ce;
+    margin-top: 100px;
+	text-align: center;
+}
+#sec {
+	color: red;
+	font-size: 30px;
+}
+[type=button] {
+	font-size: 20px;
+	color: #322d2f;
+	font-family: arial;
+	border-radius: 10px;
+	background-color: #a7d6d6;
+}
